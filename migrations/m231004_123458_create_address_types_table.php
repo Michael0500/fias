@@ -8,7 +8,7 @@ class m231004_123458_create_address_types_table extends Migration
     {
         $this->createTable('{{%address_types}}', [
             'id' => $this->bigInteger()->notNull()->unique()->comment('Идентификатор записи'),
-            'level' => $this->integer()->notNull()->comment('Уровень адресного объекта'),
+            'level' => $this->bigInteger()->notNull()->comment('Уровень адресного объекта'),
             'shortname' => $this->string(50)->notNull()->comment('Краткое наименование'),
             'name' => $this->string(250)->notNull()->comment('Полное наименование'),
             'desc' => $this->string(250)->comment('Описание'),

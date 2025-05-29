@@ -7,7 +7,7 @@ class m231004_123505_create_house_types_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%house_types}}', [
-            'id' => $this->integer()->notNull()->unique()->comment('Идентификатор типа (10 цифр)'),
+            'id' => $this->bigInteger()->notNull()->unique()->comment('Идентификатор типа (10 цифр)'),
             'name' => $this->string(50)->notNull()->comment('Наименование типа'),
             'shortname' => $this->string(50)->comment('Краткое наименование'),
             'desc' => $this->string(250)->comment('Описание типа'),

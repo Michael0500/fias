@@ -7,7 +7,7 @@ class m231004_123510_create_object_levels_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%object_levels}}', [
-            'level' => $this->smallInteger()->notNull()->unique()->comment('Уровень объекта (первичный ключ)'),
+            'level' => $this->bigInteger()->notNull()->unique()->comment('Уровень объекта (первичный ключ)'),
             'name' => $this->string(250)->notNull()->comment('Наименование уровня'),
             'shortname' => $this->string(50)->comment('Краткое наименование'),
             'updatedate' => $this->date()->notNull()->comment('Дата обновления'),

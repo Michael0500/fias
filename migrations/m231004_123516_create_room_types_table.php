@@ -7,7 +7,7 @@ class m231004_123516_create_room_types_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%room_types}}', [
-            'id' => $this->integer()->notNull()->unique()->comment('Идентификатор типа (ключ)'),
+            'id' => $this->bigInteger()->notNull()->unique()->comment('Идентификатор типа (ключ)'),
             'name' => $this->string(100)->notNull()->comment('Наименование'),
             'shortname' => $this->string(50)->comment('Краткое наименование'),
             'desc' => $this->string(250)->comment('Описание'),

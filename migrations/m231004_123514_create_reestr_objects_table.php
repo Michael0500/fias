@@ -10,7 +10,7 @@ class m231004_123514_create_reestr_objects_table extends Migration
             'objectid' => $this->bigInteger()->notNull()->comment('Уникальный идентификатор объекта'),
             'createdate' => $this->date()->notNull()->comment('Дата создания'),
             'changeid' => $this->bigInteger()->notNull()->comment('ID транзакции изменений'),
-            'levelid' => $this->integer()->notNull()->comment('Уровень объекта'),
+            'levelid' => $this->bigInteger()->notNull()->comment('Уровень объекта'),
             'updatedate' => $this->date()->notNull()->comment('Дата обновления'),
             'objectguid' => $this->char(36)->unique()->notNull()->comment('GUID объекта'),
             'isactive' => $this->tinyInteger(1)->notNull()->comment('Активность (0/1)'),

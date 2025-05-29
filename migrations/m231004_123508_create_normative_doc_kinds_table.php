@@ -7,7 +7,7 @@ class m231004_123508_create_normative_doc_kinds_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%normative_doc_kinds}}', [
-            'id' => $this->integer()->notNull()->unique()->comment('Идентификатор вида документа'),
+            'id' => $this->bigInteger()->notNull()->unique()->comment('Идентификатор вида документа'),
             'name' => $this->string(500)->notNull()->comment('Наименование вида документа'),
         ]);
 

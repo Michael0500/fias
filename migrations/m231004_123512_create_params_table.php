@@ -11,7 +11,7 @@ class m231004_123512_create_params_table extends Migration
             'objectid' => $this->bigInteger()->notNull()->comment('Глобальный идентификатор объекта'),
             'changeid' => $this->bigInteger()->comment('ID изменяющей транзакции (опционально)'),
             'changeidend' => $this->bigInteger()->notNull()->comment('ID завершающей транзакции'),
-            'typeid' => $this->integer()->notNull()->comment('Тип параметра (4 цифры)'),
+            'typeid' => $this->bigInteger()->notNull()->comment('Тип параметра (4 цифры)'),
             'value' => $this->text()->notNull()->comment('Значение параметра'),
             'updatedate' => $this->date()->notNull()->comment('Дата обновления'),
             'startdate' => $this->date()->notNull()->comment('Начало действия'),
