@@ -7,7 +7,7 @@ class m231004_123501_create_apartment_types_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%apartment_types}}', [
-            'ID' => $this->integer()->notNull()->unique()->comment('Идентификатор типа (ключ)'),
+            'ID' => $this->bigInteger()->notNull()->unique()->comment('Уникальный идентификатор записи'),
             'NAME' => $this->string(50)->notNull()->comment('Наименование'),
             'SHORTNAME' => $this->string(50)->comment('Краткое наименование'),
             'DESC' => $this->string(250)->comment('Описание'),

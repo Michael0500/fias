@@ -7,9 +7,9 @@ class m231004_123456_create_address_objects_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%address_objects}}', [
-            'ID' => $this->bigInteger()->notNull()->unique()->comment('Уникальный идентификатор записи (ключевое поле)'),
-            'OBJECTID' => $this->bigInteger()->notNull()->comment('Глобальный уникальный идентификатор (INTEGER)'),
-            'OBJECTGUID' => $this->char(36)->notNull()->comment('Глобальный уникальный идентификатор (UUID)'),
+            'ID' => $this->bigInteger()->notNull()->unique()->comment('Уникальный идентификатор записи'),
+            'OBJECTID' => $this->bigInteger()->notNull()->comment('Глобальный уникальный идентификатор'),
+            'OBJECTGUID' => $this->char(36)->notNull()->comment('Глобальный уникальный идентификатор'),
             'CHANGEID' => $this->bigInteger()->notNull()->comment('ID изменившей транзакции'),
             'NAME' => $this->string(250)->notNull()->comment('Наименование'),
             'TYPENAME' => $this->string(50)->notNull()->comment('Тип объекта'),

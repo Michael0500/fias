@@ -7,7 +7,7 @@ class m231004_123511_create_operation_types_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%operation_types}}', [
-            'ID' => $this->integer()->notNull()->unique()->comment('Идентификатор статуса (ключ)'),
+            'ID' => $this->bigInteger()->notNull()->unique()->comment('Уникальный идентификатор записи'),
             'NAME' => $this->string(100)->notNull()->comment('Наименование'),
             'SHORTNAME' => $this->string(100)->comment('Краткое наименование'),
             'DESC' => $this->string(250)->comment('Описание'),

@@ -7,7 +7,7 @@ class m231004_123517_create_steads_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%steads}}', [
-            'ID' => $this->bigInteger()->notNull()->comment('Уникальный идентификатор записи'),
+            'ID' => $this->bigInteger()->notNull()->unique()->comment('Уникальный идентификатор записи'),
             'OBJECTID' => $this->bigInteger()->notNull()->comment('Глобальный уникальный идентификатор объекта'),
             'OBJECTGUID' => $this->char(36)->notNull()->comment('UUID объекта'),
             'CHANGEID' => $this->bigInteger()->notNull()->comment('ID транзакции'),

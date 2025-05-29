@@ -7,7 +7,7 @@ class m231004_123507_create_normative_docs_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%normative_docs}}', [
-            'ID' => $this->bigInteger()->notNull()->unique()->comment('Уникальный идентификатор документа'),
+            'ID' => $this->bigInteger()->notNull()->unique()->comment('Уникальный идентификатор записи'),
             'NAME' => $this->text()->notNull()->comment('Наименование документа'),
             'DATE' => $this->date()->notNull()->comment('Дата документа'),
             'NUMBER' => $this->string(150)->notNull()->comment('Номер документа'),

@@ -7,7 +7,7 @@ class m231004_123512_create_params_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%params}}', [
-            'ID' => $this->bigInteger()->notNull()->unique()->comment('Идентификатор записи'),
+            'ID' => $this->bigInteger()->notNull()->unique()->comment('Уникальный идентификатор записи'),
             'OBJECTID' => $this->bigInteger()->notNull()->comment('Глобальный идентификатор объекта'),
             'CHANGEID' => $this->bigInteger()->comment('ID изменяющей транзакции (опционально)'),
             'CHANGEIDEND' => $this->bigInteger()->notNull()->comment('ID завершающей транзакции'),

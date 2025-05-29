@@ -7,7 +7,7 @@ class m231004_123513_create_param_types_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%param_types}}', [
-            'ID' => $this->smallInteger()->notNull()->unique()->comment('Идентификатор типа параметра (первичный ключ)'),
+            'ID' => $this->bigInteger()->notNull()->unique()->comment('Уникальный идентификатор записи'),
             'NAME' => $this->string(50)->notNull()->comment('Наименование'),
             'CODE' => $this->string(50)->notNull()->comment('Краткое наименование (код)'),
             'DESC' => $this->string(120)->comment('Описание'),

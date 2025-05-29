@@ -7,7 +7,7 @@ class m231004_123457_create_address_divisions_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%address_divisions}}', [
-            'ID' => $this->bigInteger()->notNull()->unique()->comment('Уникальный идентификатор записи (ключевое поле)'),
+            'ID' => $this->bigInteger()->notNull()->unique()->comment('Уникальный идентификатор записи'),
             'PARENTID' => $this->bigInteger()->notNull()->comment('Идентификатор родительского элемента'),
             'CHILDID' => $this->bigInteger()->notNull()->comment('Идентификатор дочернего элемента'),
             'CHANGEID' => $this->bigInteger()->notNull()->comment('ID изменившей транзакции'),

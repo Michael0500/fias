@@ -7,7 +7,7 @@ class m231004_123458_create_address_types_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%address_types}}', [
-            'ID' => $this->bigInteger()->notNull()->unique()->comment('Идентификатор записи'),
+            'ID' => $this->bigInteger()->notNull()->unique()->comment('Уникальный идентификатор записи'),
             'LEVEL' => $this->integer()->notNull()->comment('Уровень адресного объекта'),
             'SHORTNAME' => $this->string(50)->notNull()->comment('Краткое наименование'),
             'NAME' => $this->string(250)->notNull()->comment('Полное наименование'),
